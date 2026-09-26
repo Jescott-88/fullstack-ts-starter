@@ -1,0 +1,6 @@
+{
+  "name": "tire_storage",
+  "private": true,
+  "scripts": {},
+  "packageManager": "pnpm@12.7.0"
+}
