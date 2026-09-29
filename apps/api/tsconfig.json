@@ -1,0 +1,7 @@
+{
+  "extends": "@tire-storage/typescript-config/node.json",
+  "compilerOptions": {
+    "rootDir": "./src"
+  },
+  "include": ["src/**/*.ts"]
+}

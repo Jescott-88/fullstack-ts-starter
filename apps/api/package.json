@@ -1,15 +1,17 @@
 {
-  "name": "@tire_storage/api",
+  "name": "@tire-storage/api",
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "tsx watch src/server.ts"
+    "dev": "tsx watch src/server.ts",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@hono/node-server": "^2.1.1",
     "hono": "^4.13.9"
   },
   "devDependencies": {
+    "@tire-storage/typescript-config": "workspace:*",
     "@types/node": "^26.6.2",
     "tsx": "^4.23.15",
     "typescript": "^7.0.2"
