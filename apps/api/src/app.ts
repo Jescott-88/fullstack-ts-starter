@@ -1,10 +1,9 @@
-import { Hono } from 'hono';
+import { Hono } from 'hono'
 
-export const app = new Hono();
+export const app = new Hono()
 
-app.get('/health', (c)=> {
+app.get('/health', (c) => {
   return c.json({
     status: 'ok',
   })
-});
-
+})

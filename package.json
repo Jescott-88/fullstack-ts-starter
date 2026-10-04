@@ -1,6 +1,25 @@
 {
-  "name": "tire_storage",
+  "name": "fullstack-ts-starter",
   "private": true,
-  "scripts": {},
-  "packageManager": "pnpm@12.7.0"
+  "scripts": {
+    "typecheck": "pnpm -r typecheck",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "eslint .",
+    "test": "pnpm -r --if-present test",
+    "dev": "pnpm --parallel --filter @starter/api --filter @starter/web dev",
+    "build": "pnpm build:shared && pnpm build:apps",
+    "build:shared": "pnpm --filter @starter/shared build",
+    "build:apps": "pnpm --parallel --filter @starter/api --filter @starter/web build"
+  },
+  "packageManager": "pnpm@12.7.0",
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.12.0",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.7",
+    "globals": "^17.13.0",
+    "prettier": "^3.9.9",
+    "typescript-eslint": "^8.71.0"
+  }
 }

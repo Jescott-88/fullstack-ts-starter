@@ -1,7 +1,10 @@
 {
-  "extends": "@tire-storage/typescript-config/react.json",
+  "extends": "@starter/typescript-config/react.json",
   "compilerOptions": {
-    "types": ["vite/client"]
+    "types": ["vite/client"],
+    "paths": {
+      "@/*": ["./src/*"]
+    }
   },
   "include": ["src"]
 }

@@ -1,19 +1,29 @@
 {
-  "name": "@tire-storage/api",
+  "name": "@starter/api",
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "tsx watch src/server.ts",
-    "typecheck": "tsc --noEmit"
+    "dev": "tsx watch --env-file=../../.env src/server.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "db:migrate": "tsx --env-file=../../.env src/db/migrate.ts",
+    "build": "tsc -p tsconfig.build.json",
+    "start": "node --env-file=../../.env dist/server.js"
   },
   "dependencies": {
     "@hono/node-server": "^2.1.1",
-    "hono": "^4.13.9"
+    "@starter/shared": "workspace:*",
+    "hono": "^4.13.9",
+    "kysely": "^0.29.6",
+    "pg": "^8.23.1",
+    "zod": "^4.6.5"
   },
   "devDependencies": {
-    "@tire-storage/typescript-config": "workspace:*",
+    "@starter/typescript-config": "workspace:*",
     "@types/node": "^26.6.2",
+    "@types/pg": "^8.23.1",
     "tsx": "^4.23.15",
-    "typescript": "^7.0.2"
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.3"
   }
 }

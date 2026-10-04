@@ -1,5 +1,5 @@
 {
-  "extends": "@tire-storage/typescript-config/node.json",
+  "extends": "@starter/typescript-config/node.json",
   "compilerOptions": {
     "rootDir": "./src"
   },
